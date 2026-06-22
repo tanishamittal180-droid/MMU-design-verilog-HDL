@@ -1,0 +1,33 @@
+read_verilog rtl/tlb.v
+read_verilog rtl/perm.v
+read_verilog rtl/ptw.v
+read_verilog rtl/mmu.v
+
+hierarchy -check -top mmu
+
+proc
+
+opt
+
+fsm
+
+memory
+
+opt
+
+techmap
+
+opt
+
+abc
+
+clean
+
+
+stat
+
+
+write_json build/mmu.json
+
+
+write_verilog build/mmu_synth.v
